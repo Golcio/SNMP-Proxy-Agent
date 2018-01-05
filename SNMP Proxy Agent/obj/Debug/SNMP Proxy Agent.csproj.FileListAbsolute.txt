@@ -1,0 +1,11 @@
+C:\Users\Krzysztof\GitHub\SNMP Proxy Agent\SNMP Proxy Agent\bin\Debug\SNMP Proxy Agent.exe.config
+C:\Users\Krzysztof\GitHub\SNMP Proxy Agent\SNMP Proxy Agent\bin\Debug\SNMP Proxy Agent.exe
+C:\Users\Krzysztof\GitHub\SNMP Proxy Agent\SNMP Proxy Agent\bin\Debug\SNMP Proxy Agent.pdb
+C:\Users\Krzysztof\GitHub\SNMP Proxy Agent\SNMP Proxy Agent\obj\Debug\SNMP Proxy Agent.csprojResolveAssemblyReference.cache
+C:\Users\Krzysztof\GitHub\SNMP Proxy Agent\SNMP Proxy Agent\obj\Debug\SNMP_Proxy_Agent.Form1.resources
+C:\Users\Krzysztof\GitHub\SNMP Proxy Agent\SNMP Proxy Agent\obj\Debug\SNMP_Proxy_Agent.Properties.Resources.resources
+C:\Users\Krzysztof\GitHub\SNMP Proxy Agent\SNMP Proxy Agent\obj\Debug\SNMP Proxy Agent.csproj.GenerateResource.Cache
+C:\Users\Krzysztof\GitHub\SNMP Proxy Agent\SNMP Proxy Agent\obj\Debug\SNMP Proxy Agent.csproj.CoreCompileInputs.cache
+C:\Users\Krzysztof\GitHub\SNMP Proxy Agent\SNMP Proxy Agent\obj\Debug\SNMP Proxy Agent.exe
+C:\Users\Krzysztof\GitHub\SNMP Proxy Agent\SNMP Proxy Agent\obj\Debug\SNMP Proxy Agent.pdb
+C:\Users\Krzysztof\GitHub\SNMP Proxy Agent\SNMP Proxy Agent\obj\Debug\SNMP_Proxy_Agent.Connection.resources
