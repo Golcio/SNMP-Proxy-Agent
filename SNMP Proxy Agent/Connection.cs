@@ -14,8 +14,10 @@ namespace SNMP_Proxy_Agent
     public partial class Connection : Form
     {
         Thread ifConnectedThread;
-        public Connection()
+        Form1 form1;
+        public Connection(Form1 form1)
         {
+            this.form1 = form1;
             InitializeComponent();
             label2.Text = Program.address + ":" + Program.port;
             ifConnectedThread = new Thread(() => ifConnected());
@@ -39,6 +41,14 @@ namespace SNMP_Proxy_Agent
                     Invoke((MethodInvoker)(() => this.label3.Text = "Connected! Listening for SNMP calls."));
                 Thread.Sleep(100);
             }
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            ifConnectedThread.Abort();
+            Program.stopServerThread();
+            this.Hide();
+            new Form1().Show();
         }
     }
 }

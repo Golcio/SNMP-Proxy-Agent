@@ -17,6 +17,7 @@ namespace SNMP_Proxy_Agent
         static public int port;
         static public string community;
         static public bool connected = false;
+        static public bool doRunSocketThread = true;
         static Socket serverSocket;
         static Thread socketThread;
         /// <summary>
@@ -40,7 +41,7 @@ namespace SNMP_Proxy_Agent
             serverSocket = new Socket(AddressFamily.InterNetwork, SocketType.Stream, ProtocolType.Tcp);
             IPEndPoint ipEnd = new IPEndPoint(IPAddress.Parse(address), port);
             serverSocket.Bind(ipEnd);
-            while (true)
+            while (doRunSocketThread != true)
             {
                 serverSocket.Listen(0);
                 Socket clientSocket = serverSocket.Accept();
@@ -96,6 +97,8 @@ namespace SNMP_Proxy_Agent
                 while (readByte > 0);
                 connected = false;
             }
+            serverSocket.Close();
+            socketThread.Abort();
         }
 
         public static string GetLocalIPAddress()
@@ -113,8 +116,7 @@ namespace SNMP_Proxy_Agent
 
         public static void stopServerThread()
         {
-            socketThread.Abort();
-            connected = false;
+            doRunSocketThread = false;
         }
 
         public static Dictionary<Oid, AsnType> getResult(List<string> oids)

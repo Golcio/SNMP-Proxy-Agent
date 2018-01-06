@@ -12,6 +12,7 @@ namespace SNMP_Proxy_Agent
 {
     public partial class Form1 : Form
     {
+        Connection connectionForm;
         public Form1()
         {
             InitializeComponent();
@@ -58,7 +59,8 @@ namespace SNMP_Proxy_Agent
             }
 
             this.Hide();
-            new Connection().Show();
+            connectionForm = new Connection(this);
+            connectionForm.Show();
         }
     }
 }
