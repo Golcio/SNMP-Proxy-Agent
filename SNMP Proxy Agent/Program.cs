@@ -41,7 +41,7 @@ namespace SNMP_Proxy_Agent
             serverSocket = new Socket(AddressFamily.InterNetwork, SocketType.Stream, ProtocolType.Tcp);
             IPEndPoint ipEnd = new IPEndPoint(IPAddress.Parse(address), port);
             serverSocket.Bind(ipEnd);
-            while (doRunSocketThread != true)
+            while (doRunSocketThread != false)
             {
                 serverSocket.Listen(0);
                 Socket clientSocket = serverSocket.Accept();
@@ -50,6 +50,7 @@ namespace SNMP_Proxy_Agent
                 byte[] buffer = new byte[serverSocket.SendBufferSize];
 
                 int readByte;
+                int i = 0;
                 do
                 {
                     try
@@ -71,7 +72,6 @@ namespace SNMP_Proxy_Agent
                         List<string> oids = new List<string>();
                         oids.Add(messageArray[1]);
                         Dictionary<Oid, AsnType> results = getResult(oids);
-
                         if (results != null)
                         {
                             foreach (KeyValuePair<Oid, AsnType> kvp in results)
@@ -80,11 +80,11 @@ namespace SNMP_Proxy_Agent
 
                                 StringBuilder sb = new StringBuilder();
                                 sb.Append(value);
-                                sb.Append("|");
+                                sb.Append("_");
                                 sb.Append(kvp.Value.ToString());
-                                sb.Append("|");
+                                sb.Append("_");
                                 sb.Append(SnmpConstants.GetTypeName(kvp.Value.Type));
-                                sb.Append("|");
+                                sb.Append("_");
                                 sb.Append(address);
                                 output = sb.ToString();
                             }
@@ -93,6 +93,7 @@ namespace SNMP_Proxy_Agent
                             output = "No results.";
                     }
                     clientSocket.Send(System.Text.Encoding.UTF8.GetBytes(output));
+                    clientSocket.Close();
                 }
                 while (readByte > 0);
                 connected = false;
@@ -127,13 +128,13 @@ namespace SNMP_Proxy_Agent
                 snmp = new SimpleSnmp("localhost", community);
                 if (!snmp.Valid)
                 {
-                    MessageBox.Show("SNMP agent host name/IP address is invalid.");
+                    //MessageBox.Show("SNMP agent host name/IP address is invalid.");
                     return null;
                 }
                 Dictionary<Oid, AsnType> result = snmp.Get(SnmpVersion.Ver1, oids.ToArray());
                 if (result == null)
                 {
-                    MessageBox.Show("No results received.");
+                    //MessageBox.Show("No results received.");
                     return null;
                 }
 
