@@ -30,6 +30,7 @@ namespace SNMP_Proxy_Agent
 
         void ifConnected()
         {
+            Thread.Sleep(100);
             while (true)
             {
                 if (Program.connected == false)

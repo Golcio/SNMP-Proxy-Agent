@@ -9,3 +9,4 @@ C:\Users\Krzysztof\GitHub\SNMP Proxy Agent\SNMP Proxy Agent\obj\Debug\SNMP Proxy
 C:\Users\Krzysztof\GitHub\SNMP Proxy Agent\SNMP Proxy Agent\obj\Debug\SNMP Proxy Agent.exe
 C:\Users\Krzysztof\GitHub\SNMP Proxy Agent\SNMP Proxy Agent\obj\Debug\SNMP Proxy Agent.pdb
 C:\Users\Krzysztof\GitHub\SNMP Proxy Agent\SNMP Proxy Agent\obj\Debug\SNMP_Proxy_Agent.Connection.resources
+C:\Users\Krzysztof\GitHub\SNMP Proxy Agent\SNMP Proxy Agent\bin\Debug\SnmpSharpNet.dll

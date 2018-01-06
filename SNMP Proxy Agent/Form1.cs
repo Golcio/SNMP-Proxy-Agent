@@ -31,6 +31,7 @@ namespace SNMP_Proxy_Agent
         private void button1_Click(object sender, EventArgs e)
         {
             Program.address = textBox1.Text;
+            Program.community = textBox3.Text;
             try
             {
                 Program.port = Int32.Parse(textBox2.Text);
