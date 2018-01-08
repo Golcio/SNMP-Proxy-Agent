@@ -10,3 +10,16 @@ C:\Users\Krzysztof\GitHub\SNMP Proxy Agent\SNMP Proxy Agent\obj\Debug\SNMP Proxy
 C:\Users\Krzysztof\GitHub\SNMP Proxy Agent\SNMP Proxy Agent\obj\Debug\SNMP Proxy Agent.pdb
 C:\Users\Krzysztof\GitHub\SNMP Proxy Agent\SNMP Proxy Agent\obj\Debug\SNMP_Proxy_Agent.Connection.resources
 C:\Users\Krzysztof\GitHub\SNMP Proxy Agent\SNMP Proxy Agent\bin\Debug\SnmpSharpNet.dll
+D:\VisualStudioProjects\SNMP-Proxy-Agent\SNMP Proxy Agent\bin\Debug\SNMP Proxy Agent.exe.config
+D:\VisualStudioProjects\SNMP-Proxy-Agent\SNMP Proxy Agent\bin\Debug\SNMP Proxy Agent.exe
+D:\VisualStudioProjects\SNMP-Proxy-Agent\SNMP Proxy Agent\bin\Debug\SNMP Proxy Agent.pdb
+D:\VisualStudioProjects\SNMP-Proxy-Agent\SNMP Proxy Agent\bin\Debug\Newtonsoft.Json.dll
+D:\VisualStudioProjects\SNMP-Proxy-Agent\SNMP Proxy Agent\bin\Debug\SnmpSharpNet.dll
+D:\VisualStudioProjects\SNMP-Proxy-Agent\SNMP Proxy Agent\obj\Debug\SNMP Proxy Agent.csprojResolveAssemblyReference.cache
+D:\VisualStudioProjects\SNMP-Proxy-Agent\SNMP Proxy Agent\obj\Debug\SNMP_Proxy_Agent.Connection.resources
+D:\VisualStudioProjects\SNMP-Proxy-Agent\SNMP Proxy Agent\obj\Debug\SNMP_Proxy_Agent.Form1.resources
+D:\VisualStudioProjects\SNMP-Proxy-Agent\SNMP Proxy Agent\obj\Debug\SNMP_Proxy_Agent.Properties.Resources.resources
+D:\VisualStudioProjects\SNMP-Proxy-Agent\SNMP Proxy Agent\obj\Debug\SNMP Proxy Agent.csproj.GenerateResource.Cache
+D:\VisualStudioProjects\SNMP-Proxy-Agent\SNMP Proxy Agent\obj\Debug\SNMP Proxy Agent.csproj.CoreCompileInputs.cache
+D:\VisualStudioProjects\SNMP-Proxy-Agent\SNMP Proxy Agent\obj\Debug\SNMP Proxy Agent.exe
+D:\VisualStudioProjects\SNMP-Proxy-Agent\SNMP Proxy Agent\obj\Debug\SNMP Proxy Agent.pdb

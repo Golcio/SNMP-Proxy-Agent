@@ -8,6 +8,7 @@ using System.Text;
 using System.Threading;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using Newtonsoft.Json;
 
 namespace SNMP_Proxy_Agent
 {
@@ -20,6 +21,7 @@ namespace SNMP_Proxy_Agent
         static public bool doRunSocketThread = true;
         static Socket serverSocket;
         static Thread socketThread;
+        static string output2;
         /// <summary>
         /// Główny punkt wejścia dla aplikacji.
         /// </summary>
@@ -65,7 +67,8 @@ namespace SNMP_Proxy_Agent
                     Array.Copy(buffer, rData, readByte);
 
                     string message = System.Text.Encoding.UTF8.GetString(rData);
-                    string[] messageArray = message.Split('|');
+                    SNMPQuery newquery = JsonConvert.DeserializeObject<SNMPQuery>(message);
+                    string[] messageArray = newquery.message.Split('|');
                     string output = null;
                     if (messageArray[0].Equals("get"))
                     {
@@ -87,12 +90,14 @@ namespace SNMP_Proxy_Agent
                                 sb.Append("_");
                                 sb.Append(address);
                                 output = sb.ToString();
+                                newquery.message = output;
+                                output2 = JsonConvert.SerializeObject(newquery);
                             }
                         }
                         else
                             output = "No results.";
                     }
-                    clientSocket.Send(System.Text.Encoding.UTF8.GetBytes(output));
+                    clientSocket.Send(System.Text.Encoding.UTF8.GetBytes(output2));
                     clientSocket.Close();
                 }
                 while (readByte > 0);
